@@ -21,8 +21,8 @@ const Inicio = () => {
                 color: 'white',
                 fontSize: 30,
                 position: 'absolute',
-                top: 425,
-                justifyContent: 'center',
+                top: 500,
+                left: 250,
 
 
             }}>Enterate de las novedades aca!</Text>
@@ -30,100 +30,102 @@ const Inicio = () => {
             <StatusBar style="auto" />
             <Image source={perroGato}
                 style={{
-                    width: 750,
-                    height: 500,
+                    width: 400,
+                    height: 400,
+                    Image,
                     position: 'absolute',
                     bottom: -135,
-                    left: 80
-
-
-                }}></Image>
+                    left: 220
+                }}
+                resizeMode="contain"
+            ></Image>
 
             <Image source={huellasBoton}
                 style={{
                     width: 200,
                     height: 200,
                     position: 'relative',
-                    top: 200,
-                    left: -250,
+                    top: 75,
+                    left: 1,
                     transform: [{ rotate: '45deg' }]
+                }}
+                resizeMode="contain"
 
-                }}></Image>
+            ></Image>
 
             <Image source={nombreLogo}
                 style={{
                     width: 500,
                     height: 300,
                     position: 'relative',
-                    top: -395,
-                    left: 0,
+                    top: -180,
+                    left: 220,
                     borderRadius: 45,
-                }}></Image>
+                }}
+            ></Image>
 
-            <View>
-                <Pressable
-                    onPress={() => navigation.navigate('vacunas')}
-                    style={{
-                        position: 'absolute',
-                        top: 240,
-                        left: 240,
-                        width: 100,
-                        height: 50,
-                        borderWidth: 2,
-                        borderColor: 'red',
-                        backgroundColor: '#7c8efc',
-                        borderRadius: 50,
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }}>
-                    <Text style={{
-                        color: 'white',
-                        fontSize: 20,
-                    }}>
-                        Vacunas
-                    </Text>
 
-                </Pressable>
+            <Pressable
+                onPress={() => navigation.navigate('vacunas')}
+                style={{
+                    position: 'absolute',
+                    top: 250,
+                    left: 275,
+                    width: 100,
+                    height: 50,
+                    backgroundColor: '#7c8efc',
+                    borderRadius: 50,
+                    justifyContent: 'center',
+                    alignItems: 'center'
+                }}>
+                <Text style={{
+                    color: 'white',
+                    fontSize: 20,
+                }}>
+                    Vacunas
+                </Text>
 
-                <Pressable
-                    onPress={() => navigation.navigate('agenda')}
-                    style={{
-                        position: 'absolute',
-                        top: 240,
-                        right: 390,
-                        width: 100,
-                        height: 50,
-                        backgroundColor: '#7c8efc',
-                        borderRadius: 50,
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }}>
-                    <Text style={{
-                        color: 'white',
-                        fontSize: 20,
-                    }}>Agenda</Text>
-                </Pressable>
+            </Pressable>
 
-                <Pressable
-                    onPress={() => Linking.openURL('http://senasa.com')}
-                    style={{
-                        position: 'absolute',
-                        top: 240,
-                        right: 240,
-                        width: 100,
-                        height: 50,
-                        backgroundColor: '#7c8efc',
-                        borderRadius: 50,
-                        justifyContent: 'center',
-                        alignItems: 'center'
-                    }}>
-                    <Text style={{
-                        color: 'white',
-                        fontSize: 20
-                    }}>SENASA</Text>
-                </Pressable>
+            <Pressable
+                onPress={() => navigation.navigate('agenda')}
+                style={{
+                    position: 'absolute',
+                    top: 250,
+                    right: 360,
+                    width: 100,
+                    height: 50,
+                    backgroundColor: '#7c8efc',
+                    borderRadius: 50,
+                    justifyContent: 'center',
+                    alignItems: 'center'
+                }}>
+                <Text style={{
+                    color: 'white',
+                    fontSize: 20,
+                }}>Agenda</Text>
+            </Pressable>
 
-            </View>
+            <Pressable
+                onPress={() => Linking.openURL('https://bit.ly/3XYBAtP')}
+                style={{
+                    position: 'absolute',
+                    top: 250,
+                    right: 200,
+                    width: 100,
+                    height: 50,
+                    backgroundColor: '#7c8efc',
+                    borderRadius: 50,
+                    justifyContent: 'center',
+                    alignItems: 'center'
+                }}>
+                <Text style={{
+                    color: 'white',
+                    fontSize: 20
+                }}>SENASA</Text>
+            </Pressable>
+
+
         </View>
     );
 
@@ -135,8 +137,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fec9c9',
-        alignItems: 'center',
-        justifyContent: 'center',
+
         paddingTop: Constants.statusBarHeight,
         padding: 12,
     },
