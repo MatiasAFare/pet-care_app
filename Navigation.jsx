@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 
 //Iconos
@@ -12,7 +12,7 @@ import Vacunas from './pages/Vacunas';
 import Agenda from './pages/Agenda';
 
 
-const InicioStackNavigator = createNativeStackNavigator();
+const InicioStackNavigator = createStackNavigator();
 
 function MyStack() {
     return (
@@ -20,10 +20,16 @@ function MyStack() {
             initialRouteName='Inicio'>
 
             <InicioStackNavigator.Screen
+                options={{
+                    headerShown: false,
+                }}
                 name='Inicio'
                 component={Inicio}
             />
             <InicioStackNavigator.Screen
+                options={{
+                    headerShown: false,
+                }}
                 name='Agenda'
                 component={Agenda}
             />
@@ -37,7 +43,7 @@ function MyTabs() {
         <Tab.Navigator
             initialRouteName='Inicio'
             screenOptions={{
-                tabBarActiveTintColor: 'blue',
+                tabBarActiveTintColor: 'purple',
 
             }}
         >
